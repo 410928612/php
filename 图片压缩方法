@@ -1,0 +1,23 @@
+//$url 图片的路径
+//$percent 图片压缩比例，如0.6，不能超过1
+
+public function resize_img($url, $percent)
+    {
+        $arr=explode('/',$url);
+        $imgname= end($arr);
+        $count=count($arr);
+        unset($arr[$count-1]);
+        $uu=implode("/",$arr)
+        $file = ltrim($url, "/");
+        list($width, $height) = getimagesize($file); //获取原图尺寸
+        //缩放尺寸
+        $newwidth = $width * $percent;
+        $newheight = $height * $percent;
+        $src_im = imagecreatefromjpeg($file);
+        $dst_im = imagecreatetruecolor($newwidth, $newheight);
+        imagecopyresized($dst_im, $src_im, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
+        imagejpeg($dst_im, ltrim($uu."/". $imgname,"/"));
+        imagedestroy($dst_im);
+        imagedestroy($src_im);
+        return $uu."/". $imgname;
+    }
