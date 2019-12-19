@@ -1,0 +1,10 @@
+1.金额类保留两位小数
+sprintf('%.2f', $price)
+
+2.Yiicshop商城海报无法显示中文解决办法：
+汉字用这个函数转化一下
+mb_convert_encoding($this->user->nickname, "html-entities", "utf-8");
+
+3.Yii防止sql被转义类：new \yii\db\Expression($select)
+
+
