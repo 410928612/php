@@ -1,0 +1,14 @@
+composer的时候一定要注意当前终端的php版本
+
+composer require "codeception/codeception=*"
+composer require "codeception/specify=*"
+composer require "codeception/verify=*" 
+
+修改vendor/bin/codecept.bat下"SET BIN_TARGET=%~dp0/../codeception/base/codecept"为"SET BIN_TARGET=%~dp0/../codeception/codeception/codecept"
+
+创建codecept测试
+vendor/bin/codecept bootstrap
+
+vendor/bin/codecept build
+创建第一个测试用例
+vendor\bin\codecept generate:test unit Mytest
