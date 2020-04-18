@@ -11,4 +11,4 @@ vendor/bin/codecept bootstrap
 
 vendor/bin/codecept build
 创建第一个测试用例
-vendor\bin\codecept generate:test unit Mytest
+vendor/bin/codecept generate:test unit Mytest
