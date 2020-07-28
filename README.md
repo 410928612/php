@@ -6,5 +6,6 @@
 ## linux
 ## mysql
 ## swoole
+[Yii和swoole结合](https://github.com/tsingsun/yii2-swoole)
 ## redis
 ## go
